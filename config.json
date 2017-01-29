@@ -1,0 +1,6 @@
+{
+  "DriverPath":"D:\\chrome-win32\\chromedriver.exe",
+  "BrowserPath":"D:\\chrome2\\chrome.exe",
+  "UserDataDir":"D:\\chrome2\\data-dir",
+  "KC3Path":"D:\\IDEAProjects\\KC3Kai\\src"
+}
