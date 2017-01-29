@@ -13,12 +13,14 @@ public class ConfigLoader {
     public static String DriverPath;
     public static String BrowserPath;
     public static String KC3Path;
+    public static String ExtensionPath;
 
-    private class Config{
+    private class Config {
         private String UserDataDir;
         private String DriverPath;
         private String BrowserPath;
         private String KC3Path;
+        private String ExtensionPath;
     }
 
     public ConfigLoader() {
@@ -33,11 +35,12 @@ public class ConfigLoader {
         try {
             Gson gson = new Gson();
             JsonReader reader = new JsonReader(new FileReader("config.json"));
-            Config c = gson.fromJson(reader,Config.class);
-            BrowserPath=c.BrowserPath;
-            DriverPath=c.DriverPath;
-            UserDataDir=c.UserDataDir;
-            KC3Path=c.KC3Path;
+            Config c = gson.fromJson(reader, Config.class);
+            BrowserPath = c.BrowserPath;
+            DriverPath = c.DriverPath;
+            UserDataDir = c.UserDataDir;
+            KC3Path = c.KC3Path;
+            ExtensionPath = c.ExtensionPath;
         } catch (Exception e) {
             System.out.println("Error while loading json");
             System.out.println(e.getStackTrace());
